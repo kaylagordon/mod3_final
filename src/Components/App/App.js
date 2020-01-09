@@ -1,24 +1,33 @@
 import React from 'react';
-import './App.scss';
 import { Route } from 'react-router-dom';
-
+import HomePage from '../HomePage/HomePage';
+import NextButton from '../NextButton/NextButton';
+import GameForm from '../GameForm/GameForm';
+import Header from '../Header/Header';
+import MathBoard from '../MathBoard/MathBoard';
+import EndPage from '../EndPage/EndPage';
+import './App.scss';
 
 function App() {
   return (
-    <div className='app'>
+    <main className='app'>
       <Route exact path = '/'>
-        <p>/</p>
+        <HomePage />
+        <NextButton />
       </Route>
       <Route exact path = '/select'>
-        <p>/select</p>
+        <GameForm />
+        <NextButton />
       </Route>
       <Route exact path = '/play'>
-        <p>/play</p>
+        <Header />
+        <MathBoard />
       </Route>
       <Route exact path = '/end'>
-        <p>/end</p>
+        <EndPage />
+        <NextButton />
       </Route>
-    </div>
+    </main>
   );
 }
 
