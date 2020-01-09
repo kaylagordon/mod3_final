@@ -13,11 +13,11 @@ function App() {
     <main className='app'>
       <Route exact path = '/'>
         <HomePage />
-        <NextButton />
+        <NextButton nextLink = '/select'/>
       </Route>
       <Route exact path = '/select'>
         <GameForm />
-        <NextButton />
+        <NextButton nextLink = '/play'/>
       </Route>
       <Route exact path = '/play'>
         <Header />
@@ -25,7 +25,7 @@ function App() {
       </Route>
       <Route exact path = '/end'>
         <EndPage />
-        <NextButton />
+        <NextButton nextLink = '/'/>
       </Route>
     </main>
   );

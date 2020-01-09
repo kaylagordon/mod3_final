@@ -1,11 +1,14 @@
 import React from 'react';
 import './NextButton.scss';
+import { Link } from 'react-router-dom';
 
-function NextButton() {
+
+function NextButton({ nextLink }) {
+
   return (
-    <div className='nextButton'>
-
-    </div>
+    <Link to = {nextLink}>
+      <button className='nextButton'>let's go</button>
+    </Link>
   );
 }
 
