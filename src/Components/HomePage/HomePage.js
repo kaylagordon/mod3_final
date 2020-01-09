@@ -3,9 +3,10 @@ import './HomePage.scss';
 
 function HomePage() {
   return (
-    <div className='homePage'>
-
-    </div>
+    <section className='homePage'>
+      <h1>MATH<span className='highlight-title'>4</span>YOU</h1>
+      <h2>solve. check. repeat.</h2>
+    </section>
   );
 }
 
