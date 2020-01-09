@@ -1,11 +1,19 @@
 import React from 'react';
 import './MathBoard.scss';
+import MathCard from '../MathCard/MathCard';
 
 function MathBoard() {
   return (
-    <div className='mathBoard'>
-
-    </div>
+    <section className='mathBoard'>
+      <MathCard />
+      <MathCard />
+      <MathCard />
+      <MathCard />
+      <MathCard />
+      <MathCard />
+      <MathCard />
+      <MathCard />
+    </section>
   );
 }
 
