@@ -10,7 +10,7 @@ import './App.scss';
 
 function App() {
   return (
-    <main className='app'>
+    <main>
       <Route exact path = '/'>
         <HomePage />
         <NextButton nextLink = '/select'/>

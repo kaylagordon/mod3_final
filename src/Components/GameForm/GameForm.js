@@ -3,7 +3,7 @@ import './GameForm.scss';
 
 function GameForm() {
   return (
-    <form className='gameForm'>
+    <form>
       <p className='form-label'>choose your topic:</p>
       <div className='form-buttons-container'>
         <button className='form-button' id='pemdas'>PEMDAS</button>
