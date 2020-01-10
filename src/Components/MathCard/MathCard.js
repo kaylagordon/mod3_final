@@ -1,15 +1,24 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './MathCard.scss';
 import { pemdas } from '../../problemSets';
 
-function MathCard() {
+class MathCard extends Component {
+  constructor() {
+    super()
+    this.state= {
+      expression: pemdas(),
+      answer: ''
+    }
+  }
 
-  return (
-    <div className='mathCard'>
-      <p className='expression-text'>{pemdas()}</p>
-      <input type='text'/>
-    </div>
-  );
+    render() {
+      return (
+        <div className='mathCard'>
+          <p className='expression-text'>{this.state.expression}</p>
+          <input type='text'/>
+        </div>
+      );
+    }
 }
 
 export default MathCard;
