@@ -12,7 +12,7 @@ export const pemdas = () => {
     `${randomNumber1}+${randomNumber2}-${randomNumber3}+${randomNumber4}`,
     `${randomNumber1}(${randomNumber2})/${randomNumber3}`,
     `(${randomNumber1}+${randomNumber2})(${randomNumber3}-${randomNumber4})`,
-    `(${randomNumber1}+${randomNumber2}(${randomNumber3}))-(${randomNumber4})`,
+    `(${randomNumber1}+${randomNumber2}(${randomNumber3}))-${randomNumber4}`,
     `(${randomNumber1}/(${randomNumber2}-${randomNumber3}))(${randomNumber4})`,
     `(${randomNumber1}+${randomNumber2}-${randomNumber3})(${randomNumber4})`,
   ];
