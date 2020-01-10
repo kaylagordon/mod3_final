@@ -11,14 +11,24 @@ class MathCard extends Component {
     }
   }
 
-    render() {
-      return (
-        <div className='mathCard'>
-          <p className='expression-text'>{this.state.expression}</p>
-          <input type='text'/>
-        </div>
-      );
-    }
+  updateAnswer = event => {
+    this.setState({
+      answer: event.target.value
+    })
+  }
+
+  render() {
+    return (
+      <div className='mathCard'>
+        <p className='expression-text'>{this.state.expression}</p>
+        <input
+          type='text'
+          value={this.state.answer}
+          onChange={this.updateAnswer}
+        />
+      </div>
+    );
+  }
 }
 
 export default MathCard;
