@@ -4,18 +4,18 @@ import { pemdas } from '../../problemSets';
 
 class MathCard extends Component {
   constructor() {
-    super()
+    super();
     this.state= {
       expression: pemdas(),
       answer: ''
-    }
-  }
+    };
+  };
 
   updateAnswer = event => {
     this.setState({
       answer: event.target.value
-    })
-  }
+    });
+  };
 
   render() {
     return (
@@ -28,7 +28,7 @@ class MathCard extends Component {
         />
       </div>
     );
-  }
-}
+  };
+};
 
 export default MathCard;

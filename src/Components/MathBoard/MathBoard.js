@@ -16,6 +16,6 @@ function MathBoard() {
       {renderCards()}
     </section>
   );
-}
+};
 
 export default MathBoard;
