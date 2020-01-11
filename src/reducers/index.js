@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 import { currentProblemSetReducer } from './currentProblemSetReducer';
-import { currentTimeReducer } from './currentTimeReducer';
+import { timerReducer } from './timerReducer';
 
 export const rootReducer = combineReducers({
   currentProblemSet: currentProblemSetReducer,
-  currentTime: currentTimeReducer
+  timer: timerReducer
 });

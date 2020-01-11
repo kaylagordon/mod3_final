@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './GameForm.scss';
 import { connect } from 'react-redux';
 import { updateProblemSet } from '../../actions/updateProblemSet';
-import { updateTime } from '../../actions/updateTime';
+import { updateTimer } from '../../actions/updateTimer';
 
 class GameForm extends Component {
   constructor() {
@@ -19,7 +19,7 @@ class GameForm extends Component {
 
   updateSelectedTime = event => {
     event.preventDefault();
-    this.props.updateTime(event.target.value)
+    this.props.updateTimer(event.target.value)
   }
 
   render() {
@@ -86,7 +86,7 @@ class GameForm extends Component {
 
 export const mapDispatchToProps = dispatch => ({
   updateProblemSet: problemSet => dispatch(updateProblemSet(problemSet)),
-  updateTime: time => dispatch(updateTime(time))
+  updateTimer: time => dispatch(updateTimer({startTime: parseInt(time), isOver: false}))
 })
 
 export default connect(null, mapDispatchToProps)(GameForm);
