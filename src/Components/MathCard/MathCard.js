@@ -9,7 +9,8 @@ class MathCard extends Component {
     super({ currentProblemSet });
     this.state= {
       expression: problemSets[currentProblemSet](),
-      answer: ''
+      answer: '',
+      evaluatedTo: 'waiting'
     };
   };
 
@@ -23,14 +24,20 @@ class MathCard extends Component {
     getAnswer(this.props.currentProblemSet, this.state.expression)
     .then(data => {
       if(data.result === this.state.answer) {
-        console.log('You are right!');
+        this.setState({
+          evaluatedTo: 'correct'
+        })
+      } else {
+        this.setState({
+          evaluatedTo: 'incorrect'
+        })
       }
     })
   }
 
   render() {
     return (
-      <div className='mathCard'>
+      <div className={`mathCard ${this.state.evaluatedTo}`}>
         <p className='expression-text'>{this.state.expression}</p>
         <input
           type='text'
