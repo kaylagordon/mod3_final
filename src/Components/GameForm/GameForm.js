@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
 import './GameForm.scss';
+import { connect } from 'react-redux';
+import { updateProblemSet } from '../../actions/updateProblemSet'
 
 class GameForm extends Component {
   constructor() {
     super();
     this.state = {
-      selectedProblemSet: '',
       selectedTime: ''
     }
   }
 
   updateSelected = event => {
     event.preventDefault();
-    this.setState({
-      [event.target.name]: event.target.value
-    })
+    this.props.updateProblemSet(event.target.value)
   }
 
   render() {
@@ -79,4 +78,8 @@ class GameForm extends Component {
   }
 }
 
-export default GameForm;
+export const mapDispatchToProps = dispatch => ({
+  updateProblemSet: problemSet => dispatch(updateProblemSet(problemSet))
+})
+
+export default connect(null, mapDispatchToProps)(GameForm);

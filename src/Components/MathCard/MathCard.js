@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './MathCard.scss';
 import { pemdas } from '../../problemSets';
+import { connect } from 'react-redux';
 
 class MathCard extends Component {
   constructor() {
@@ -31,4 +32,8 @@ class MathCard extends Component {
   };
 };
 
-export default MathCard;
+export const mapStateToProps = state => ({
+  currentProblemSet: state.currentProblemSet
+})
+
+export default connect(mapStateToProps)(MathCard);
