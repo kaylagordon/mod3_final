@@ -23,7 +23,7 @@ class GameForm extends Component {
         <div className='form-buttons-container'>
           <button
             className='form-button'
-            value='pemdas'
+            value='simplify'
             name='selectedProblemSet'
             onClick={this.updateSelected}
           >PEMDAS</button>
