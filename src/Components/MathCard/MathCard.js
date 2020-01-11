@@ -27,11 +27,20 @@ class MathCard extends Component {
         this.setState({
           evaluatedTo: 'correct'
         })
+        setTimeout(this.getNewCard, 2000)
       } else {
         this.setState({
           evaluatedTo: 'incorrect'
         })
       }
+    })
+  }
+
+  getNewCard = () => {
+    this.setState({
+      expression: problemSets[this.props.currentProblemSet](),
+      answer: '',
+      evaluatedTo: 'waiting'
     })
   }
 
