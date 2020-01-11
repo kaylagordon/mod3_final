@@ -1,5 +1,6 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
 import HomePage from '../HomePage/HomePage';
 import NextButton from '../NextButton/NextButton';
 import GameForm from '../GameForm/GameForm';
@@ -8,7 +9,7 @@ import MathBoard from '../MathBoard/MathBoard';
 import EndPage from '../EndPage/EndPage';
 import './App.scss';
 
-function App() {
+function App({ timerIsOver }) {
   return (
     <main>
       <Route exact path = '/'>
@@ -20,8 +21,15 @@ function App() {
         <NextButton nextLink = '/play'/>
       </Route>
       <Route exact path = '/play'>
-        <Header />
-        <MathBoard />
+        {timerIsOver ?
+          <Redirect to = '/end'/> :
+          (
+            <>
+              <Header />
+              <MathBoard />
+            </>
+          )
+        }
       </Route>
       <Route exact path = '/end'>
         <EndPage />
@@ -31,4 +39,8 @@ function App() {
   );
 }
 
-export default App;
+export const mapStateToProps = state => ({
+  timerIsOver: state.timer.isOver
+})
+
+export default connect(mapStateToProps)(App);

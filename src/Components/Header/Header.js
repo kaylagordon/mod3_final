@@ -2,8 +2,9 @@ import React from 'react';
 import './Header.scss';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { updateTimer } from '../../actions/updateTimer';
 
-function Header({ startTime }) {
+function Header({ startTime, updateTimer }) {
   const countdown = () => {
     var minutes = Math.floor(startTime / 60);
     var seconds = startTime % 60;
@@ -11,13 +12,15 @@ function Header({ startTime }) {
     const tick = () => {
       seconds--;
       if(seconds > 0) {
-        // "0:" + (seconds < 10 ? "0" : "") + String(seconds);
         setTimeout(tick, 1000);
       } else {
-        console.log("Game over");
+        updateTimer({
+          startTime: 0,
+          isOver: true
+        })
       }
     }
-
+    
     tick();
   }
 
@@ -36,4 +39,8 @@ export const mapStateToProps = state => ({
   startTime: state.timer.startTime
 })
 
-export default connect(mapStateToProps)(Header);
+export const mapDispatchToProps = dispatch => ({
+  updateTimer: time => dispatch(updateTimer(time))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
