@@ -12,6 +12,6 @@ function Header() {
       </Link>
     </header>
   );
-}
+};
 
 export default Header;
