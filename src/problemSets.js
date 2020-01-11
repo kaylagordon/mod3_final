@@ -8,14 +8,14 @@ export const problemSets = {
     let problemStructures = [
       `${randomNumber1}(${randomNumber2})+${randomNumber3}`,
       `${randomNumber1}(${randomNumber2})-${randomNumber3}(${randomNumber4})`,
-      `${randomNumber1}/${randomNumber2}-${randomNumber3}(${randomNumber4})`,
+      `${randomNumber1}^2+${randomNumber2}-${randomNumber3}(${randomNumber4})`,
       `${randomNumber1}+${randomNumber2}(${randomNumber3})`,
       `${randomNumber1}+${randomNumber2}-${randomNumber3}+${randomNumber4}`,
-      `${randomNumber1}(${randomNumber2})/${randomNumber3}`,
+      `${randomNumber1}(${randomNumber2})(${randomNumber3})^2`,
       `(${randomNumber1}+${randomNumber2})(${randomNumber3}-${randomNumber4})`,
       `(${randomNumber1}+${randomNumber2}(${randomNumber3}))-${randomNumber4}`,
-      `(${randomNumber1}/(${randomNumber2}-${randomNumber3}))(${randomNumber4})`,
-      `(${randomNumber1}+${randomNumber2}-${randomNumber3})(${randomNumber4})`,
+      `(${randomNumber1}-(${randomNumber2}-${randomNumber3}))(${randomNumber4})`,
+      `(${randomNumber1}+${randomNumber2}^2-${randomNumber3})(${randomNumber4})`,
     ];
     let expression = problemStructures[randomNumber5];
 
