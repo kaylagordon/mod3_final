@@ -19,7 +19,7 @@ class GameForm extends Component {
 
   updateSelectedTime = event => {
     event.preventDefault();
-    this.props.updateTimer({startTime: parseInt(event.target.value), isOver: false})
+    this.props.updateTimer('startTime', parseInt(event.target.value))
   }
 
   render() {
@@ -86,7 +86,7 @@ class GameForm extends Component {
 
 export const mapDispatchToProps = dispatch => ({
   updateProblemSet: problemSet => dispatch(updateProblemSet(problemSet)),
-  updateTimer: time => dispatch(updateTimer(time))
+  updateTimer: (propertyToChange, updatedValue) => dispatch(updateTimer(propertyToChange, updatedValue))
 })
 
 export default connect(null, mapDispatchToProps)(GameForm);

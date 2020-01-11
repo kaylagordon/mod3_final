@@ -13,14 +13,15 @@ function Header({ startTime, updateTimer }) {
       seconds--;
       if(seconds > 0) {
         setTimeout(tick, 1000);
+      } else if (minutes > 1) {
+        minutes--;
+        seconds = 60;
+        tick()
       } else {
-        updateTimer({
-          startTime: 0,
-          isOver: true
-        })
+        updateTimer('isOver', true)
       }
     }
-    
+
     tick();
   }
 
@@ -40,7 +41,7 @@ export const mapStateToProps = state => ({
 })
 
 export const mapDispatchToProps = dispatch => ({
-  updateTimer: time => dispatch(updateTimer(time))
+  updateTimer: (propertyToChange, updatedValue) => dispatch(updateTimer(propertyToChange, updatedValue))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
