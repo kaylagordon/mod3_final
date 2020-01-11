@@ -1,5 +1,5 @@
 export const problemSets = {
-  pemdas: () => {
+  simplify: () => {
     let randomNumber1 = Math.round(Math.random() * (5 - 1) + 1);
     let randomNumber2 = Math.round(Math.random() * (5 - 1) + 1);
     let randomNumber3 = Math.round(Math.random() * (5 - 1) + 1);
