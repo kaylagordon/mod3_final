@@ -5,12 +5,6 @@ import { updateProblemSet } from '../../actions/updateProblemSet';
 import { updateTimer } from '../../actions/updateTimer';
 
 class GameForm extends Component {
-  constructor() {
-    super();
-    this.state = {
-      selectedTime: ''
-    }
-  }
 
   updateSelectedProblemSet = event => {
     event.preventDefault();
@@ -28,11 +22,11 @@ class GameForm extends Component {
         <p className='form-label'>choose your topic:</p>
         <div className='form-buttons-container'>
           <button
-            className='form-button'
+            className={`form-button ${this.props.currentProblemSet === 'simplify' ? 'selected' : ''}`}
             value='simplify'
             name='selectedProblemSet'
             onClick={this.updateSelectedProblemSet}
-          >PEMDAS</button>
+          >SIMPLIFY</button>
           <button
             className='form-button'
             value='factoring'
@@ -67,7 +61,7 @@ class GameForm extends Component {
             onClick={this.updateSelectedTime}
           >3 MIN</button>
           <button
-            className='form-button'
+            className={`form-button ${this.props.currentTimer === parseInt('60') ? 'selected' : ''}`}
             value='60'
             name='selectedTime'
             onClick={this.updateSelectedTime}
@@ -84,9 +78,14 @@ class GameForm extends Component {
   }
 }
 
+export const mapStateToProps = state => ({
+  currentProblemSet: state.currentProblemSet,
+  currentTimer: state.timer.startTime
+})
+
 export const mapDispatchToProps = dispatch => ({
   updateProblemSet: problemSet => dispatch(updateProblemSet(problemSet)),
   updateTimer: (propertyToChange, updatedValue) => dispatch(updateTimer(propertyToChange, updatedValue))
 })
 
-export default connect(null, mapDispatchToProps)(GameForm);
+export default connect(mapStateToProps, mapDispatchToProps)(GameForm);

@@ -1,4 +1,4 @@
-export const timerReducer = (state = { startTime: null, isOver: false }, action) => {
+export const timerReducer = (state = { startTime: 60, isOver: false }, action) => {
   switch (action.type) {
     case 'UPDATE_TIMER' :
       const updatedTimer = {...state};

@@ -7,7 +7,7 @@ import { updateTimer } from '../../actions/updateTimer';
 
 function NextButton({ nextLink, updateTimer }) {
   const resetInfo = () => {
-    if(nextLink === '/end') {
+    if(nextLink === '/') {
       updateTimer('isOver', false);
     }
   }
