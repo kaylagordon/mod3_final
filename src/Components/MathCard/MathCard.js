@@ -23,8 +23,7 @@ class MathCard extends Component {
   checkAnswer = () => {
     getAnswer(this.props.currentProblemSet, this.state.expression)
     .then(data => {
-      console.log(data.result);
-      if(data.result === this.state.answer) {
+      if(data.result.split(' ').join('') === this.state.answer) {
         this.setState({
           evaluatedTo: 'correct'
         })
