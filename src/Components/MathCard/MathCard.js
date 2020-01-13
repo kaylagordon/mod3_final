@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './MathCard.scss';
 import { problemSets } from '../../problemSets';
 import { connect } from 'react-redux';
-import { getAnswer } from '../../apiCalls/apiCalls'
+import { getAnswer } from '../../apiCalls/apiCalls';
+import { increaseCorrect, increaseIncorrect } from '../../actions/updateGameStats';
 
 class MathCard extends Component {
   constructor({ currentProblemSet }) {
@@ -24,11 +25,13 @@ class MathCard extends Component {
     getAnswer(this.props.currentProblemSet, this.state.expression)
     .then(data => {
       if(data.result.split(' ').join('') === this.state.answer) {
+        this.props.increaseCorrect();
         this.setState({
           evaluatedTo: 'correct'
         })
         setTimeout(this.getNewCard, 2000)
       } else {
+        this.props.increaseIncorrect();
         this.setState({
           evaluatedTo: 'incorrect'
         })
@@ -65,4 +68,9 @@ export const mapStateToProps = state => ({
   currentProblemSet: state.currentProblemSet
 })
 
-export default connect(mapStateToProps)(MathCard);
+export const mapDispatchToProps = dispatch => ({
+  increaseCorrect: () => dispatch(increaseCorrect()),
+  increaseIncorrect: () => dispatch(increaseIncorrect())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(MathCard);

@@ -1,4 +1,4 @@
-export const currentProblemSetReducer = (state = 'simplify', action) => {
+export const problemSetReducer = (state = 'simplify', action) => {
   switch (action.type) {
     case 'UPDATE_PROBLEM_SET' :
       return action.problemSet;
