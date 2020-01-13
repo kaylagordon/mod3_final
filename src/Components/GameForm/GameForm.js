@@ -5,21 +5,32 @@ import { updateProblemSet } from '../../actions/updateProblemSet';
 import { updateTimer } from '../../actions/updateTimer';
 
 class GameForm extends Component {
-  constructor() {
-    super();
-    this.state = {
-      selectedTime: ''
+  updateSelected = event => {
+    event.preventDefault();
+    if (event.target.name === 'currentProblemSet') {
+      this.props.updateProblemSet(event.target.value)
+    } else if (event.target.name === 'currentTimer') {
+      this.props.updateTimer('startTime', parseInt(event.target.value))
     }
   }
 
-  updateSelectedProblemSet = event => {
-    event.preventDefault();
-    this.props.updateProblemSet(event.target.value)
-  }
-
-  updateSelectedTime = event => {
-    event.preventDefault();
-    this.props.updateTimer({startTime: parseInt(event.target.value), isOver: false})
+  renderButtons = (category, topics) => {
+    return topics.map(topic => {
+      return (
+        <button
+          className={`${this.props[category] === topic ?
+            'form-button selected' :
+            'form-button'}`
+          }
+          value={topic}
+          name={category}
+          onClick={this.updateSelected}
+        >{category === 'currentProblemSet' ?
+          topic.toUpperCase() :
+          topic/60 + ' MIN'
+        }</button>
+      )
+    })
   }
 
   render() {
@@ -27,66 +38,25 @@ class GameForm extends Component {
       <form>
         <p className='form-label'>choose your topic:</p>
         <div className='form-buttons-container'>
-          <button
-            className='form-button'
-            value='simplify'
-            name='selectedProblemSet'
-            onClick={this.updateSelectedProblemSet}
-          >PEMDAS</button>
-          <button
-            className='form-button'
-            value='factoring'
-            name='selectedProblemSet'
-            onClick={this.updateSelectedProblemSet}
-          >FACTORING</button>
-          <button
-            className='form-button'
-            value='deriving'
-            name='selectedProblemSet'
-            onClick={this.updateSelectedProblemSet}
-          >DERIVING</button>
-          <button
-            className='form-button'
-            value='trigonometry'
-            name='selectedProblemSet'
-            onClick={this.updateSelectedProblemSet}
-          >TRIGONOMETRY</button>
-          <button
-            className='form-button'
-            value='mixed'
-            name='selectedProblemSet'
-            onClick={this.updateSelectedProblemSet}
-          >MIXED BAG</button>
+          {this.renderButtons('currentProblemSet', ['simplify', 'factor', 'derive'])}
         </div>
         <p className='form-label'>choose your time:</p>
         <div className='form-buttons-container'>
-          <button
-            className='form-button'
-            value='180'
-            name='selectedTime'
-            onClick={this.updateSelectedTime}
-          >3 MIN</button>
-          <button
-            className='form-button'
-            value='60'
-            name='selectedTime'
-            onClick={this.updateSelectedTime}
-          >1 MIN</button>
-          <button
-            className='form-button'
-            value='30'
-            name='selectedTime'
-            onClick={this.updateSelectedTime}
-          >30 SEC</button>
+          {this.renderButtons('currentTimer', [180, 60, 30])}
         </div>
       </form>
     );
   }
 }
 
-export const mapDispatchToProps = dispatch => ({
-  updateProblemSet: problemSet => dispatch(updateProblemSet(problemSet)),
-  updateTimer: time => dispatch(updateTimer(time))
+export const mapStateToProps = state => ({
+  currentProblemSet: state.currentProblemSet,
+  currentTimer: state.timer.startTime
 })
 
-export default connect(null, mapDispatchToProps)(GameForm);
+export const mapDispatchToProps = dispatch => ({
+  updateProblemSet: problemSet => dispatch(updateProblemSet(problemSet)),
+  updateTimer: (propertyToChange, updatedValue) => dispatch(updateTimer(propertyToChange, updatedValue))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(GameForm);

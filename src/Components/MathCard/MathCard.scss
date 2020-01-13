@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .mathCard {
   border: 1px solid black;
   margin: 2%;
@@ -10,9 +12,9 @@
 }
 
 .correct {
-  background-color: green;
+  background-color: $correct-color;
 }
 
 .incorrect {
-  background-color: red;
+  background-color: $incorrect-color;
 }

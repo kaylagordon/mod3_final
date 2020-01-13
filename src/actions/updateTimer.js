@@ -1,4 +1,5 @@
-export const updateTimer = timer => ({
+export const updateTimer = (propertyToChange, updatedValue) => ({
   type: 'UPDATE_TIMER',
-  timer
+  propertyToChange,
+  updatedValue
 });

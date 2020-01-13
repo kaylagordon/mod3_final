@@ -1,7 +1,9 @@
-export const timerReducer = (state = {}, action) => {
+export const timerReducer = (state = { startTime: 60, isOver: false }, action) => {
   switch (action.type) {
     case 'UPDATE_TIMER' :
-      return action.timer;
+      const updatedTimer = {...state};
+      updatedTimer[action.propertyToChange] = action.updatedValue
+      return updatedTimer;
     default:
       return state;
   }

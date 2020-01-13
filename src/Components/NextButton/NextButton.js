@@ -1,15 +1,32 @@
 import React from 'react';
 import './NextButton.scss';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { updateTimer } from '../../actions/updateTimer';
+import { resetGameStats } from '../../actions/updateGameStats';
 
 
-function NextButton({ nextLink }) {
+function NextButton({ nextLink, updateTimer, resetGameStats }) {
+  const resetInfo = () => {
+    if(nextLink === '/') {
+      updateTimer('isOver', false);
+      resetGameStats();
+    }
+  }
 
   return (
     <Link to = {nextLink}>
-      <button className='nextButton'>let's go</button>
+      <button
+        className='nextButton'
+        onClick={resetInfo}
+      >let's go</button>
     </Link>
   );
 }
 
-export default NextButton;
+export const mapDispatchToProps = dispatch => ({
+  updateTimer: (propertyToChange, updatedValue) => dispatch(updateTimer(propertyToChange, updatedValue)),
+  resetGameStats: () => dispatch(resetGameStats())
+})
+
+export default connect(null, mapDispatchToProps)(NextButton);
