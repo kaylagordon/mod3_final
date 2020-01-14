@@ -1,8 +1,4 @@
 ## MATH4YOU
-![intro](https://media.giphy.com/media/hWMVmLuE3YxxJRqRxv/giphy.gif)
-  
-  
-  
 ![play](https://media.giphy.com/media/lSClnBHdPka1IILgl7/giphy.gif)
 
 ### ABOUT
