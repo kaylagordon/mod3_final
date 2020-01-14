@@ -3,9 +3,9 @@ import './MathCard.scss';
 import { problemSets } from '../../problemSets';
 import { connect } from 'react-redux';
 import { getAnswer } from '../../apiCalls/apiCalls';
-import { increaseCorrect, increaseIncorrect } from '../../actions/updateGameStats';
+import { increaseCorrect, increaseIncorrect } from '../../actions';
 
-class MathCard extends Component {
+export class MathCard extends Component {
   constructor({ currentProblemSet }) {
     super({ currentProblemSet });
     this.state= {

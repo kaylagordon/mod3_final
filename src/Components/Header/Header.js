@@ -2,9 +2,9 @@ import React from 'react';
 import './Header.scss';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { updateTimer } from '../../actions/updateTimer';
+import { updateTimer } from '../../actions';
 
-function Header({ startTime, updateTimer }) {
+export const Header = ({ startTime, updateTimer }) => {
   const countdown = () => {
     var minutes = Math.floor(startTime / 60);
     var seconds = startTime % 60;

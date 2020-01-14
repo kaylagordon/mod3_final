@@ -2,11 +2,10 @@ import React from 'react';
 import './NextButton.scss';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { updateTimer } from '../../actions/updateTimer';
-import { resetGameStats } from '../../actions/updateGameStats';
+import { updateTimer, resetGameStats } from '../../actions';
 
 
-function NextButton({ nextLink, updateTimer, resetGameStats }) {
+export const NextButton = ({ nextLink, updateTimer, resetGameStats }) => {
   const resetInfo = () => {
     if(nextLink === '/') {
       updateTimer('isOver', false);
