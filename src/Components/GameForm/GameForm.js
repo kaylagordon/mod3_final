@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './GameForm.scss';
 import { connect } from 'react-redux';
-import { updateProblemSet } from '../../actions/updateProblemSet';
-import { updateTimer } from '../../actions/updateTimer';
+import { updateProblemSet, updateTimer } from '../../actions';
 
 export class GameForm extends Component {
   updateSelected = event => {

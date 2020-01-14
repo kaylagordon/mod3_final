@@ -3,7 +3,7 @@ import './MathCard.scss';
 import { problemSets } from '../../problemSets';
 import { connect } from 'react-redux';
 import { getAnswer } from '../../apiCalls/apiCalls';
-import { increaseCorrect, increaseIncorrect } from '../../actions/updateGameStats';
+import { increaseCorrect, increaseIncorrect } from '../../actions';
 
 export class MathCard extends Component {
   constructor({ currentProblemSet }) {

@@ -45,7 +45,8 @@
     "coveragePathIgnorePatterns": [
       "src/serviceWorker.js",
       "src/problemSets.js",
-      "src/index.js"
+      "src/index.js",
+      "reducers/index.js"
     ]
   }
 }

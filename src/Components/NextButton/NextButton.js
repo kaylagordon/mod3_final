@@ -2,8 +2,7 @@ import React from 'react';
 import './NextButton.scss';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { updateTimer } from '../../actions/updateTimer';
-import { resetGameStats } from '../../actions/updateGameStats';
+import { updateTimer, resetGameStats } from '../../actions';
 
 
 export const NextButton = ({ nextLink, updateTimer, resetGameStats }) => {
