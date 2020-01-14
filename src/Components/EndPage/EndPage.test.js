@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { EndPage } from './EndPage';
+import { EndPage, mapStateToProps } from './EndPage';
 import { shallow } from 'enzyme';
 
 describe('EndPage', () => {
@@ -20,6 +20,35 @@ describe('EndPage', () => {
 
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
+  });
+
+  describe('mapStateToProps', () => {
+    it('should return an object with game information', () => {
+
+      const mockState = {
+        currentProblemSet: 'simplify',
+        timer: {
+          startTime: 30,
+          isOver: true
+        },
+        gameStats: {
+          numberCorrect: 3,
+          numberIncorrect: 2
+        }
+      };
+
+      const expected = {
+        gameStats: {
+          numberCorrect: 3,
+          numberIncorrect: 2
+        },
+        time: 30
+      };
+
+      const mappedProps = mapStateToProps(mockState);
+
+      expect(mappedProps).toEqual(expected);
+    });
   });
 
 });
