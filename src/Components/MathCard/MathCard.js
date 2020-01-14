@@ -29,7 +29,7 @@ export class MathCard extends Component {
         this.setState({
           evaluatedTo: 'correct'
         })
-        setTimeout(this.getNewCard, 2000)
+        setTimeout(this.getNewCard, 2500)
       } else {
         this.props.increaseIncorrect();
         this.setState({
