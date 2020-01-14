@@ -10,5 +10,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### INSTRUCTIONS
 
 ### SCREENSHOTS
+![gif](https://media.giphy.com/media/lSClnBHdPka1IILgl7/giphy.gif)
 
 
