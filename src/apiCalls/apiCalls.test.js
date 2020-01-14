@@ -22,17 +22,17 @@ describe('retrieveMovies', () => {
       expect(window.fetch).toHaveBeenCalledWith('https://newton.now.sh/derive/x^2');
   })
 
-  // it('should return an array of ideas', () => {
-  //     expect(retrieveMovies()).resolves.toEqual(mockResponse);
-  // })
-  //
-  // it('should return an error for response that is not ok', () => {
-  //     window.fetch = jest.fn().mockImplementation(() => {
-  //         return Promise.resolve({
-  //           ok: false,
-  //         });
-  //       });
-  //     expect(postUser()).rejects.toEqual(Error('Error fetching ideas'))
-  // })
+  it('should return an object', () => {
+      expect(getAnswer()).resolves.toEqual(mockResponse);
+  })
+
+  it('should return an error for response that is not ok', () => {
+      window.fetch = jest.fn().mockImplementation(() => {
+          return Promise.resolve({
+            ok: false,
+          });
+        });
+      expect(getAnswer()).rejects.toEqual(Error('Error fetching ideas'))
+  })
 
 });
