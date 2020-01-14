@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { App, mapStateToProps } from './App';
 import { shallow } from 'enzyme';
 

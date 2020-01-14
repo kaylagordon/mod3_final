@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { MathBoard } from './MathBoard';
 import { shallow } from 'enzyme';
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { Header, mapStateToProps, mapDispatchToProps } from './Header';
 import { shallow } from 'enzyme';
 import { updateTimer } from '../../actions';

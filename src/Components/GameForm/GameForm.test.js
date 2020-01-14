@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { GameForm, mapStateToProps, mapDispatchToProps } from './GameForm';
 import { shallow } from 'enzyme';
 import { updateProblemSet, updateTimer } from '../../actions';

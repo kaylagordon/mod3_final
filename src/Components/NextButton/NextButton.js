@@ -21,9 +21,8 @@ export const NextButton = ({ nextLink, updateTimer, resetGameStats }) => {
         onClick={resetInfo}
       >
       <p>let's go!</p>
-      <img src={arrowImage} />
+      <img src={arrowImage} alt='next-arrow'/>
       </button>
-
     </Link>
   );
 }
