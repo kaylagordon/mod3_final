@@ -1,13 +1,22 @@
 ## MATH4YOU
-[View the page!]()
-![gif](https://media.giphy.com/media/lSClnBHdPka1IILgl7/giphy.gif)
+![intro](https://media.giphy.com/media/hWMVmLuE3YxxJRqRxv/giphy.gif)
+![play](https://media.giphy.com/media/lSClnBHdPka1IILgl7/giphy.gif)
+![end](https://media.giphy.com/media/XcdMCUS2WI5hUGU2Q7/giphy.gif)
 
 ### ABOUT
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### TECHNOLOGIES USED
 
 ### INSTRUCTIONS
+
+### TECHNOLOGIES USED
+
+### WINS
+
+### CHALLENGES
+
+### FUTURE ITERATIONS
+
 
 
 
