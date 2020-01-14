@@ -24,6 +24,32 @@ describe('GameForm', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should invoke updateProblemSet when updateSelected runs', () => {
+    let event = {
+      target: {
+        name: 'currentProblemSet',
+        value: 'derive'
+      },
+      preventDefault: jest.fn()
+    }
+    wrapper.instance().updateSelected(event);
+
+    expect(mockUpdateProblemSet).toHaveBeenCalledWith('derive');
+  })
+
+  it('should invoke updateTimer when updateSelected runs', () => {
+    let event = {
+      target: {
+        name: 'currentTimer',
+        value: '180'
+      },
+      preventDefault: jest.fn()
+    }
+    wrapper.instance().updateSelected(event);
+
+    expect(mockUpdateTimer).toHaveBeenCalledWith('startTime', 180);
+  })
+
   describe('mapStateToProps', () => {
     it('should return an object with game information', () => {
 
