@@ -1,0 +1,16 @@
+.nextButton {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25vw;
+  margin-left: -25vw;
+  p {
+    font-size: 1.3vw;
+    margin: 0;
+  }
+  img {
+    width: 7vw;
+  }
+}

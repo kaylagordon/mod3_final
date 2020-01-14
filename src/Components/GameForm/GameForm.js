@@ -36,13 +36,18 @@ export class GameForm extends Component {
   render() {
     return (
       <form>
-        <p className='form-label'>choose your topic:</p>
-        <div className='form-buttons-container'>
-          {this.renderButtons('currentProblemSet', ['simplify', 'factor', 'derive'])}
+        <h1>MATH<span>4</span>YOU</h1>
+        <div>
+          <p className='form-label'>choose your topic:</p>
+          <div className='form-buttons-container'>
+            {this.renderButtons('currentProblemSet', ['simplify', 'factor', 'derive'])}
+          </div>
         </div>
-        <p className='form-label'>choose your time:</p>
-        <div className='form-buttons-container'>
-          {this.renderButtons('currentTimer', [180, 60, 30])}
+        <div>
+          <p className='form-label'>choose your time:</p>
+          <div className='form-buttons-container'>
+            {this.renderButtons('currentTimer', [180, 60, 30])}
+          </div>
         </div>
       </form>
     );
