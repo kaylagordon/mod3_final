@@ -21,11 +21,17 @@ The problem sets are created using methods that generate random numbers and prob
 - Sass
 
 ### WINS
+- Creatively approaching how to create large problem set without hard-coding problems
+- Clean UX/UI
+- Robust testing suite
+- Adding a timer to the display
 
 ### CHALLENGES
+- Testing methods in functional components
 
 ### FUTURE ITERATIONS
-
+- Create user profiles that hold past records and create challenges for beating old scores
+- Ensure that all factoring problems are solvable
 
 
 
