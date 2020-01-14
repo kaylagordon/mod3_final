@@ -24,10 +24,10 @@ export const App = ({ timerIsOver }) => {
         {timerIsOver ?
           <Redirect to = '/end'/> :
           (
-            <>
+            <section className='game-board'>
               <Header />
               <MathBoard />
-            </>
+            </section>
           )
         }
       </Route>

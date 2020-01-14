@@ -3,6 +3,7 @@ import './NextButton.scss';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { updateTimer, resetGameStats } from '../../actions';
+import arrowImage from '../../images/arrow-icon.png';
 
 
 export const NextButton = ({ nextLink, updateTimer, resetGameStats }) => {
@@ -18,7 +19,11 @@ export const NextButton = ({ nextLink, updateTimer, resetGameStats }) => {
       <button
         className='nextButton'
         onClick={resetInfo}
-      >let's go</button>
+      >
+      <p>let's go!</p>
+      <img src={arrowImage} />
+      </button>
+
     </Link>
   );
 }
