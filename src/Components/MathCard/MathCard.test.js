@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { MathCard, mapStateToProps, mapDispatchToProps } from './MathCard';
 import { shallow } from 'enzyme';
 import { increaseCorrect, increaseIncorrect} from '../../actions';

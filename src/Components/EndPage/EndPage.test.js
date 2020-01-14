@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { EndPage, mapStateToProps } from './EndPage';
 import { shallow } from 'enzyme';
 

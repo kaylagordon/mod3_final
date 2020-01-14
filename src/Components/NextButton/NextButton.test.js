@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { NextButton, mapDispatchToProps, resetInfo } from './NextButton';
 import { shallow } from 'enzyme';
 import { resetGameStats, updateTimer } from '../../actions';
