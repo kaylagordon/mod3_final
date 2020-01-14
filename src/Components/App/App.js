@@ -9,7 +9,7 @@ import MathBoard from '../MathBoard/MathBoard';
 import EndPage from '../EndPage/EndPage';
 import './App.scss';
 
-function App({ timerIsOver }) {
+export const App = ({ timerIsOver }) => {
   return (
     <main>
       <Route exact path = '/'>

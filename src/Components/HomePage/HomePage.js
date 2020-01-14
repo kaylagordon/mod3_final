@@ -1,7 +1,7 @@
 import React from 'react';
 import './HomePage.scss';
 
-function HomePage() {
+export const HomePage = () => {
   return (
     <section className='homePage'>
       <h1>MATH<span className='highlight-title'>4</span>YOU</h1>

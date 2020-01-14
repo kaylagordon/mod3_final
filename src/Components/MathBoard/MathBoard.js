@@ -2,7 +2,7 @@ import React from 'react';
 import './MathBoard.scss';
 import MathCard from '../MathCard/MathCard';
 
-function MathBoard() {
+export const MathBoard = () => {
   const renderCards = () => {
     let cards = [];
     for (var i = 0; i < 8; i++) {

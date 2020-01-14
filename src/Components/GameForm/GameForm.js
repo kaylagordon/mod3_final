@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { updateProblemSet } from '../../actions/updateProblemSet';
 import { updateTimer } from '../../actions/updateTimer';
 
-class GameForm extends Component {
+export class GameForm extends Component {
   updateSelected = event => {
     event.preventDefault();
     if (event.target.name === 'currentProblemSet') {
@@ -18,6 +18,7 @@ class GameForm extends Component {
     return topics.map(topic => {
       return (
         <button
+        key={Math.random()}
           className={`${this.props[category] === topic ?
             'form-button selected' :
             'form-button'}`

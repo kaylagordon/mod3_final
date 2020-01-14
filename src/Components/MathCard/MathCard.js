@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { getAnswer } from '../../apiCalls/apiCalls';
 import { increaseCorrect, increaseIncorrect } from '../../actions/updateGameStats';
 
-class MathCard extends Component {
+export class MathCard extends Component {
   constructor({ currentProblemSet }) {
     super({ currentProblemSet });
     this.state= {

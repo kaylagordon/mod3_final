@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import './EndPage.scss';
 
-function EndPage({ gameStats, time }) {
+export const EndPage = ({ gameStats, time }) => {
   const speed =
     ((gameStats.numberCorrect
     / time

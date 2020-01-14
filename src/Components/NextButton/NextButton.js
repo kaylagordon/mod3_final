@@ -6,7 +6,7 @@ import { updateTimer } from '../../actions/updateTimer';
 import { resetGameStats } from '../../actions/updateGameStats';
 
 
-function NextButton({ nextLink, updateTimer, resetGameStats }) {
+export const NextButton = ({ nextLink, updateTimer, resetGameStats }) => {
   const resetInfo = () => {
     if(nextLink === '/') {
       updateTimer('isOver', false);
