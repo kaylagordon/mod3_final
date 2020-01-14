@@ -37,13 +37,13 @@ export class GameForm extends Component {
     return (
       <form>
         <h1>MATH<span>4</span>YOU</h1>
-        <div>
+        <div className='topic-container'>
           <p className='form-label'>choose your topic:</p>
           <div className='form-buttons-container'>
             {this.renderButtons('currentProblemSet', ['simplify', 'factor', 'derive'])}
           </div>
         </div>
-        <div>
+        <div className='topic-container'>
           <p className='form-label'>choose your time:</p>
           <div className='form-buttons-container'>
             {this.renderButtons('currentTimer', [180, 60, 30])}

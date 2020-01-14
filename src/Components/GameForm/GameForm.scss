@@ -8,22 +8,21 @@ form {
   height: 25vw;
   margin: auto;
   margin-top: 6vw;
+  box-shadow: 12px 12px $secondary-color;
   div {
     display: flex;
     justify-content: center;
   }
   button {
-    margin: 1vw;
+    margin: 0 1vw;
     width: 7vw;
     padding: 1vw;
     border-radius: 25px;
     color: white;
     background-color: $secondary-color;
     border: none;
-    .selected {
-      background-color: white;
-      color: $primary-color;
-    }
+    font-size: 1.2vw;
+    align-items: center;
   }
   span {
     color: $secondary-color;
@@ -35,4 +34,13 @@ form {
   h2 {
     font-size: 1.3vw;
   }
+}
+
+.selected {
+  background-color: white;
+  color: $primary-color;
+}
+
+.topic-container {
+  margin: 2vw;
 }
