@@ -19,6 +19,44 @@ describe('Header', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  describe('countdown', () => {
+    it('should subract one second from state', () => {
+      wrapper.setState({
+        minutesLeft: 1,
+        secondsLeft: 31
+      });
+
+      wrapper.instance().countdown();
+
+      expect(wrapper.state('secondsLeft')).toEqual(30)
+    })
+
+    it('should subract one minute and reset seconds in state', () => {
+      wrapper.setState({
+        minutesLeft: 1,
+        secondsLeft: 0
+      });
+
+      wrapper.instance().countdown();
+
+      expect(wrapper.state()).toEqual({
+        minutesLeft: 0,
+        secondsLeft: 60
+      })
+    })
+
+    it('should invoke updateTimer is countdown is over', () => {
+      wrapper.setState({
+        minutesLeft: 0,
+        secondsLeft: 0
+      });
+
+      wrapper.instance().countdown();
+
+      expect(mockUpdateTimer).toHaveBeenCalledWith('isOver', true)
+    })
+  })
+
   describe('mapStateToProps', () => {
     it('should return an object with game information', () => {
 

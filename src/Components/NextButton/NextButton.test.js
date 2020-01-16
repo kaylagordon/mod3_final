@@ -21,12 +21,12 @@ describe('NextButton', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  // it('should invoke methods if resetInfo is called', () => {
-  //   resetInfo()
-  //
-  //   expect(mockUpdateTimer).toHaveBeenCalledWith('isOver', false);
-  //   expect(mockResetGameStats).toHaveBeenCalled();
-  // });
+  it('should invoke methods if resetInfo is called', () => {
+    wrapper.instance().resetInfo();
+
+    expect(mockUpdateTimer).toHaveBeenCalledWith('isOver', false);
+    expect(mockResetGameStats).toHaveBeenCalled();
+  });
 
   describe('mapDispatchToProps', () => {
     it('calls dispatch with a updateTimer action when updateTimer is called', () => {
