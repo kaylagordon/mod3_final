@@ -25,9 +25,7 @@ The problem sets are created using methods that generate random numbers and prob
 - Clean UX/UI
 - Robust testing suite
 - Adding a timer to the display
-- 100% testing coverage (see below)
-
-<img width="250" alt="Screen Shot 2020-01-16 at 10 38 06 AM" src="https://user-images.githubusercontent.com/51416773/72548646-5bf9f800-384c-11ea-83af-56ca649f96aa.png">
+- Robust testing suite
 
 ### CHALLENGES
 - Testing methods in functional components
