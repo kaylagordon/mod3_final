@@ -6,6 +6,8 @@ This app was built to help people increase their math fluency in three areas: si
 
 The problem sets are created using methods that generate random numbers and problem structures. Fetch calls are made to the [Newton API](https://github.com/aunyks/newton-api) to check user answers. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). This project has a robust testing suite.
 
+NOTE: Click [here](https://github.com/kaylaewood/math4you-hooks) to see this projects with React Hooks implemented!
+
 ### INSTRUCTIONS
 - `git clone` this repo
 - `cd` into that directory
