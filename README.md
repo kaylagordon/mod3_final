@@ -1,6 +1,6 @@
 ## MATH4YOU
 
-![intro](https://share.getcloudapp.com/mXuyopgw)
+![intro](https://p10.f2.n0.cdn.getcloudapp.com/items/mXuyopgw/Screen%20Recording%202020-08-02%20at%2009.52.26%20PM.gif?v=89f3c9f93b2d362d9c54643fc989dc6b)
 ![play](https://media.giphy.com/media/lSClnBHdPka1IILgl7/giphy.gif)
 
 ### ABOUT
