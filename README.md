@@ -1,6 +1,5 @@
 ## MATH4YOU
 
-![intro](https://p10.f2.n0.cdn.getcloudapp.com/items/mXuyopgw/Screen%20Recording%202020-08-02%20at%2009.52.26%20PM.gif?v=89f3c9f93b2d362d9c54643fc989dc6b)
 ![play](https://media.giphy.com/media/lSClnBHdPka1IILgl7/giphy.gif)
 
 ### ABOUT
@@ -8,7 +7,7 @@ This app was built to help people increase their math fluency in three areas: si
 
 The problem sets are created using methods that generate random numbers and problem structures. Fetch calls are made to the [Newton API](https://github.com/aunyks/newton-api) to check user answers. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). This project has a robust testing suite.
 
-[Click here](https://math4you.herokuapp.com/) to launch app! Note: The Newton API is currently down, so the app will not work as expected. 
+[Click here](https://math4you.herokuapp.com/) to launch app! Note: The Newton API is currently down⚠️, so the app will not work as expected. 
 [Click here](https://github.com/kaylaewood/math4you-hooks) to see this projects with React Hooks implemented!
 
 ### INSTRUCTIONS
