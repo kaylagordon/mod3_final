@@ -39,7 +39,4 @@ The problem sets are created using methods that generate random numbers and prob
 - Create user profiles that hold past records and create challenges for beating old scores
 - Ensure that all factoring problems are solvable
 
-```html
-<p>hello</p>
-```
 
