@@ -9,7 +9,7 @@
     "fibers": "^4.0.2",
     "node": "^13.8.0",
     "node-darwin-x64": "^13.8.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-redux": "^7.1.3",
